@@ -1,0 +1,32 @@
+body{
+	background-color: lightblue;
+}
+h1 {
+	background-color: rgba(255, 255, 0, 0.8);
+}
+h2 {
+	padding: 0.5em;
+	border: 3px solid red;
+	margin: 20px;
+}
+h3 {
+	border: 5px solid yellow;
+}
+
+div {
+	padding: 0.5em;
+	border: 3px solid red;
+	margin: 20px;
+}
+
+.bigtext {
+	font-weight:  bold;
+	font-style: italic;
+	font-size: 24px;
+}
+.regulartext {
+	font-size: 20px;
+}
+.smalltext {
+	font-size: 16px;
+}

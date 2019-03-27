@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+<h1>
+		<h1>Hello. This a new attempt at syntax definition</h1>
+</h1>
+
+<script>
+
+const myA = [1, 2, 6, 4, 2];
+console.log("Function to find largest number in an array\n");
+console.log("The array = ", myA);
+
+function biggest(myArray) {
+	let largestValue = myArray[0];
+	let indexNumber =1;
+	let numberOfIndices = myArray.length;
+	console.log("starting indexNumber = ", indexNumber, "length = ", numberOfIndices);
+
+	while(indexNumber < numberOfIndices) {
+		if( myArray[indexNumber] > largestValue) {
+			largestValue = myArray[indexNumber];
+		}
+		indexNumber = indexNumber +1;
+	}
+	return largestValue
+}
+console.log("Biggest = ", biggest(myA));
+
+
+console.log("\n\nHere is some mundane introductory stuff!");
+const myFullName = "Brent Wanless";	//String
+console.log( "Name 		- ",myFullName,"	This is a string");
+
+// define me with an object
+const me ={firstname:"Brent", lastname:"Wanless", state:"confusion"};
+console.log( "My ID from an object definition:", me.firstname, me.lastname, "in a state of", me.state);
+
+// define const numbers and output, then do an undefined
+const bigValue = 123456789; 
+console.log("\nHuge number	", bigValue, "Clearly a big number");	//Large number
+const smallValue = 2;					//Small number
+console.log("Small number	", smallValue,"Yes it is a small number");
+
+let xyz;
+console.log("\n\nLet's see what happens with an undefined variable: xyz = ", xyz)
+
+// Now define the xyz variable
+xyz = 123.456;
+console.log("And now we have defined the value in javascript: xyz = ", xyz);
+
+console.log('\n\nHello world from inline javascript');
+
+</script>
+
+<script type="text/javascript"  src = "basic.js">
+</script>
+
+<!-- Prompt for input of 2 values and compare -->
+<!-- <script>
+console.log("\n\nLet's do a boolean compare on two numbers.");
+
+var val1 = prompt("What is the first number?");
+var val2 = prompt("What is the second number?");
+
+	console.log("\nThe first number is ", val1, " and the second number is",val2,".");
+
+if(val1==val2){
+	console.log("The two values are equal.")
+}else {
+	console.log("The two values are not equal.")
+}
+</script> -->
+
+<!-- <script>
+ --><!-- // 
+// if (val1 > val2)
+// {
+// 	console.log("In fact, the first value",val1, "is greater than the second value", val2);
+// }
+// else if (val2 > val1) 
+// {
+// 	console.log("In fact, the second value",val2, "is greater than the first value", val1);
+// } else if (val1 = val2)
+// {
+// 	console.log("It appears the two values of", val1, "are equal.");	
+// }
+ -->
+<!-- console.log("Let's take those two numbers and compute the product in a function.");
+
+function multiplier()
+{
+	return val1*val2;
+}
+console.log("The product of val1", val1, "and val2", val2, "is", multiplier());
+ -->
+
+<!-- create an array of cities -->
+
+<script>
+console.log("\n\nLet's make a stab at ARRAYS!");
+
+const cities = ["Vancouver", "Victoria", "Duncan", "Nanaimo", "Courtnay"];
+
+console.log("\nThere are initially", cities.length, "elements in the array 'cities.'");	
+console.log(cities, "NICE.");
+
+console.log("Let's remove the last element, Courtnay, and add the centre of the universe at the start.")
+cities.pop();
+cities.unshift("Toronto");
+console.log(cities);
+
+console.log("\nNow lets change element four to Ladysmith.");
+cities[3] = "Ladysmith";
+console.log(cities);
+
+console.log("\nfinally lets add the element comox to the end");
+cities.push("Comox");
+console.log("the new last element = ", cities[5]);
+console.log("The new cities array = ", cities);
+
+
+</script>
+
+<script>
+
+// add an object definition with integer id tags
+
+console.log("\n\nObject definition exercise");
+prov = {
+		ab:"alberta",
+		sk:"saskatchewan",
+		ma:"manitoba"
+};
+console.log("the first element prov 1 = ", prov.ab);
+console.log("the complete object is = ", prov);
+
+// add ontario at start using text id tag
+
+prov.on = "ontario";
+console.log("\nadd a new element at the end = ", prov.on);
+console.log("\nthe entire object is now = ", prov);
+
+// create a function to sum values from 1 to a specified limit "maxval"
+console.log("\nAn exercise in summing within a function");
+const maxVal = 5;
+let total = 0;
+function summing(maxVal, total) {
+	for ( i = 1; i <= maxVal; i++) {
+		total = total + i;
+		}
+	return total;
+}
+console.log("The sum of 1 to ", maxVal, "equals", summing(maxVal, total));
+console.log("the total is ", total, "doesn't work, it was cleared on function exit?");
+
+total = summing(maxVal, total);
+console.log("new total from maxVal 5 = ", total);
+
+</script>
+
+<body> Goodbye for now
+</body>
