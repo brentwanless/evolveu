@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<title>Competancy 110</title>
+
+<head>
+<style>
+h1	{
+	font-style:italic;
+	page-break-before: always;
+}
+p.st1 {
+	margin-left: 5px;
+	font-weight: bold;
+}
+
+ol {
+	text-align: left;
+	margin-left: 30px;
+	cursor:pointer;
+}
+p.st2 {
+	text-align: left;
+}
+button {
+	text-align: left;
+	color: red;
+	cursor:cell;
+}
+
+</style>
+</head>
+
+<body>
+<section>
+
+<div id = "bwDiv" style= "text-align: center; border:solid; background-image: linear-gradient(to right, blue , aqua)">
+
+<h1>Basic DOM</h1>
+ 
+<p class="st1">This is a list of stuff</p>
+
+<!-- The following is the ol ordered list -->
+
+<div id = list style = "font-weight: bold">
+<ol id="bwList">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ol>
+</div>
+
+<div id = button>
+	<button id="showBtn">Show</button>
+	<button id="addBtn">Add default</button>
+	<button id="insertBtn">Insert ddefault</button><br><br>
+	<input id="itemInput" type = "text" placeholder=" Enter new item">
+	<button id="enter">Enter</button><br><br>
+	<button id="deleteBtn">Delete</button>
+	<button id="clearBtn">Clear</button>
+</div>
+<br>
+
+</div>
+</section>
+
+<section>
+<h1>Working with Cards</h1>
+</section>
+
+<script type="text/javascript"  src = "dom.js"></script>
+
+</body>
+</html>

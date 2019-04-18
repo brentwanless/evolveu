@@ -136,3 +136,51 @@ const arrayLarry = ['larry', 'shumlich'];
 assertEquals('larry.shumlich@evolveu.ca', makeEmailArr(arrayLarry));
 assertEquals('bill.smith@evolveu.com', makeEmailArr(['bill','smith']));
 assertEquals('amy.jones@evolveu.ca', makeEmailArr(['amy','jones']));
+
+// arrow function
+
+const x = 3;
+const y = 5;
+
+let sum = (a,b) => a+b;
+
+console.log("two argument arrow function sum = ", sum(x,y));
+
+let sayHi = () => alert("No Argument Arrow function");
+
+const n = 5;
+let triple = n => n * 3;
+console.log("tripling arrow function", triple(n));
+
+// sayHi();
+
+
+
+
+console.log('-----Function Options - - - - - - - -');
+
+function simpleFunction(p1) {
+    return `   simpleFunction: ${p1}   `;
+}
+
+const simpleArrow = (p1) => `   simpleArrow: ${p1}   `;
+
+const anotherArrow = (p1) => {
+    const a = 'do what ever is needed';
+    const b = 'in this error function';
+    return `   anotherArrow: ${p1}   `;
+}
+
+console.log(simpleFunction('what.'));
+
+console.log(simpleArrow('what!'));
+
+console.log(anotherArrow('what?'));
+
+console.log(function () {
+    return 'what ever is new!';
+}());
+
+
+
+

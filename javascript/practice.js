@@ -111,10 +111,8 @@ function loopStaff(staffList) {
 	let emailArray = [];
 	console.log("staffList in loopstaff", staffList[0]); //show first
 
-	// for (staffList of data.staff){
 	for (value of staffList){
 
-		// emailArray.push(makeEmailObj(staffList));
 		emailArray = makeEmailObj(staffList);
 	}
 	console.log("in loopstaff for loop emailArray = ", emailArray);
@@ -238,43 +236,22 @@ assertEquals('Benjamin.Amis@evolveu.ca', emailForIn[6])
 
 console.log("\n\nPractice March 20 - loopWithEach and loopWithMap callbacks\n");
 
-			// THIS WORKED BUT IS NOT A CALLBACK
-			// function loopWithEach(staffList) {
-			// 	console.log("\n\nIn function loopWithEach");
-
-			// 	let emailArray = [];
-			// 	for (staffList of data.staff){
-			// 		emailArray.push(makeEmailObj(staffList));
-
-			// 		// console.log("loopWithEach in 'for' loop", emailArray);
-			// 	}
-			// 	return emailArray;
-			// }
-
 console.log('-----emailWithEach');
 
 function loopWithEach (staffList) {
-	let i = 0;
 
+	let localArray = [];
 	console.log("in loopWithEach  ", i, staffList);
 
-	localArray.push(makeEmailObj(staffList));
+	// staffList.forEach( localArray.push(makeEmailObj(staffList ) ));
 
-	console.log("in function loopWithEach  localArray = ", localArray(i));
-	i++;
-}
+	staffList.forEach(function(item) {  // CREATE A FUNCTION TO REPLACE ANONYMOUS function
+		localArray.push(makeEmailObj(item))
+		});
 
-function myCallback(staffList, func) {
-
-	length = staffList.length;
-	console.log("length = ", length);
-
-	for(i=0; i < length; i++) {
-
-	func(i);
-	console.log("myCallback i =", i);
-	}
-}
+	console.log("in function loopWithEach  localArray = ", localArray);
+	return localArray;
+} 
 
 const emailWithEach = loopWithEach(data.staff); // Larrys
 
@@ -284,20 +261,16 @@ assertEquals('Jane.Smith@evolveu.ca', emailWithEach[0]);
 assertEquals('Olivia.Notly@evolveu.com', emailWithEach[3]);
 assertEquals('Benjamin.Amis@evolveu.ca', emailWithEach[6]);
 
+
+
 console.log('\n\n-----emailWithMap');
 
-function loopWithMap(staffList) {
-	console.log("\n\nIn function loopWithMap");
+function loopWithMap (staffList) {
+	let newEmailArray = [];
 
-	let emailArray = [];
-	for (staffList of data.staff){
-		emailArray.push(makeEmailObj(staffList));
-
-		console.log("loopWithMap in 'for' loop", emailArray);
-	}
-	return emailArray;
+	newEmailArray = staffList.map(makeEmailObj); //MAKEEMAILOBJ IS THE CALLBACK
+	return newEmailArray;
 }
-
 const emailWithMap = loopWithMap(data.staff);
 
 console.log("emailWithMap = ", emailWithMap);
@@ -313,5 +286,59 @@ write a function to receive the same array (staff) and return the total of balan
 create a table of objects of people having name and age
 write a function to receive the above array and return the total of the ages
 write a function to receive the above array and return the average the ages
-
 */
+
+console.log('\n-----sumBalance\n\n');
+
+function sumBalance (staffListBalance) {
+	let sum = 0;
+	let i = 0;
+	length = staffListBalance.length;
+	console.log("in sumBalance staffListBalance  ", length, staffListBalance);
+
+	for (i=0; i<length; i++) {
+
+		// console.log("staffListBalance  ", staffListBalance[i].balance);
+
+		sum = sum + staffListBalance[i].balance;
+	}
+	// console.log("sum  ", sum);
+return sum;
+}
+console.log( sum = sumBalance(data.staff));
+
+
+console.log('\n-----create table of objects with people name and age\n\n');
+console.log("Created in practice.htm to display in Body\n");
+
+
+console.log('\n-----function to receive array and total ages\n');
+
+function sumTableAges (table) {
+
+	let totalAge = 0;
+	for ( i = 0; i < table.rows.length; i++ ) {
+
+		totalAge = totalAge + Number(table.rows[i].cells[1].innerHTML);
+
+		console.log("\ntable ", i, 1, table.rows[i].cells[1]);
+	}
+	return totalAge;
+}
+console.log("totalAge = ", total = sumTableAges(bwTable));
+
+
+console.log('\n-----function to receive array and average the ages\n');
+
+function avgTableAges (table) {
+
+	let avgAge = 0;
+	for ( i = 0; i < table.rows.length; i++ ) {
+
+		avgAge = avgAge + Number(table.rows[i].cells[1].innerHTML);
+	}
+	avgAge = avgAge / table.rows.length;
+	return avgAge;
+}
+console.log("avgAge = ", average =avgTableAges(bwTable));
+console.log("avgAge rounded = ", average = Math.round(avgTableAges(bwTable)));
