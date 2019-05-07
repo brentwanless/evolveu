@@ -16,8 +16,7 @@
 	border: solid;
 	width: 90%;
 	background-color: LightSkyBlue;
-	margin: 2%;
-	margin: auto;
+	margin:5px;
 }
 .clButton {
 	background-color: ivory;
@@ -31,8 +30,6 @@ body {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-
-
 
 h1	{
 	font-style:italic;
