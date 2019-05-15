@@ -9,5 +9,5 @@ class Yacht1Comp extends React.Component {
         )
     }
 }
-export default Yacht1Comp;
+ export default Yacht1Comp;
  

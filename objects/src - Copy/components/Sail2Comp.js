@@ -1,13 +1,13 @@
 import React from "react";
 
-class Yacht1Comp extends React.Component {
+class Sail2Comp extends React.Component {
     render() {
         return (
             <div>
-                <h1>In Yacht1Comp</h1>
+                <h1>In Sail2Comp</h1>
             </div>
         )
     }
 }
-export default Yacht1Comp;
+ export default Sail2Comp;
  
