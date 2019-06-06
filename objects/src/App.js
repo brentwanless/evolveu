@@ -3,11 +3,13 @@ import './App.css';
 
 import ReactHead from './components/ReactHead';
 // import Sail2Comp from './components/Sail2Comp'; REPLACED BY 'MathComp'
-import Power1Comp from './components/Power1Comp';
+// import Power1Comp from './components/Power1Comp';   REPLACED BY 'AccountComp'
+
 import Yacht1Comp from './components/Yacht1Comp';
 import Yacht2Comp from './components/Yacht2Comp';
 
 import MathComp from './components/MathComp';
+import AccountComp from './components/AccountComp';
 
 import sail3icon from './graphics/sail-3.jpg';
 import sail4icon from './graphics/sail-4.jpg';
@@ -41,8 +43,8 @@ class App extends React.Component {
 
             <div className= "Title">
                 <h3>Sail Home</h3>
-                <h3>Math Sails</h3>
-                <h3>Power Works</h3>
+                <h3>MathComp</h3>
+                <h3>AccountComp</h3>
                 <h3>Yacht Works</h3>
                 <h3>Yacht Works 2</h3>
             </div>
@@ -63,7 +65,7 @@ class App extends React.Component {
     
             {(this.state.toDisplay === "home") ? <ReactHead /> : null }
             {(this.state.toDisplay === "sail2") ? <MathComp /> : null }
-            {(this.state.toDisplay === "power1") ? <Power1Comp /> : null }
+            {(this.state.toDisplay === "power1") ? <AccountComp /> : null }
             {(this.state.toDisplay === "yacht1") ? <Yacht1Comp /> : null }        
             {(this.state.toDisplay === "yacht2") ? <Yacht2Comp /> : null }
 

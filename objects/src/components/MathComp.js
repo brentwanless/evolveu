@@ -52,9 +52,9 @@ class MathComp extends React.Component {
     render() {
         return (
             <div className = "Calculator">
-                <h2>Hello from MathComp</h2>
+                <h2>Welcome To MathComp</h2>
 
-                <div className = "InputData">
+                <div className = "MathData">
                     <input id="input1" type="number" placeholder=" Input One"
                         style={{backgroundColor: 'lightgrey'}}/>
 
@@ -62,7 +62,6 @@ class MathComp extends React.Component {
                         style={{backgroundColor: 'lightgrey'}}/>
                 </div>
 
-                <h2>Enter Data and Click Desired Operation</h2>
 
                 <img src={plusIcon} className="MathBtn" alt="logo" operand = "addition" onClick={this.setStateFunction} />
                 <img src={minusIcon} className="MathBtn" alt="logo" operand = "subtract" onClick={this.setStateFunction} />

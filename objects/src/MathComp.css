@@ -1,12 +1,12 @@
 .MathBtn {
     float: center;
+    margin-top: 20px;
     margin-left: 10px;
     border: 3px solid tan;
     padding: 10px;
-
-
     height: 10vmin;
     pointer-events: fill;
+    cursor: pointer;
 }
 .MathBtn2 {
     display: block;
@@ -24,10 +24,12 @@
     height: 10vmin;
     pointer-events: fill;
 }
-.InputData {
-    /* margin-left: 300px;
-    margin-right: 300px; */
+.MathData {
     margin-left: 30%;
     margin-right: 30%;
     box-shadow: 10px 10px 5px grey;
+}
+input:placeholder-shown {
+    font-weight: bold;
+    color: white;
 }

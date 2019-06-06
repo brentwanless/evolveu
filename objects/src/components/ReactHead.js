@@ -11,7 +11,7 @@ class ReactHead extends React.Component {
         return (
             <div>
                 <h1>This is the Sail Home Page</h1>
-                <h2>Select a Boating Icon Above</h2>
+                <h2>Select a Boat Icon Above</h2>
                 <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>

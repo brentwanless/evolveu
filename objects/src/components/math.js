@@ -1,7 +1,3 @@
-
-
-console.log("Hello from MATH");
-
 function sum(a, b) {
     return(a + b);
 }

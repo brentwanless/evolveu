@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 
 import MathComp from './components/MathComp';
 
-it('renders without crashing', () => {
+it('MathComp renders without crashing', () => {
   const div = document.createElement('div1');
   ReactDOM.render(<MathComp />, div);
   ReactDOM.unmountComponentAtNode(div);
+  console.log("pass from mathcomp");
 });

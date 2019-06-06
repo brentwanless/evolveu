@@ -1,0 +1,20 @@
+/* Change this up */
+
+.text-btn {
+    background-color: #1f1e38;
+    border: 2px solid #000000;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 3px 1px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .AccountData {
+    margin-left: 10%;
+    margin-right: 10%;
+}
